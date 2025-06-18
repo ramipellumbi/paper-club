@@ -1,0 +1,21 @@
+{
+  "venvPath": "spectral/",
+  "venv": ".venv",
+  "include": ["spectral/**"],
+  "typeCheckingMode": "strict",
+  "reportDeprecated": "warning",
+  "reportGeneralTypeIssues": false,
+  "reportMissingParameterType": false,
+  "reportMissingTypeArgument": false,
+  "reportMissingTypeStubs": false,
+  "reportPrivateUsage": false,
+  "reportUninitializedInstanceVariable": "error",
+  "reportUnknownArgumentType": false,
+  "reportUnknownLambdaType": false,
+  "reportUnknownMemberType": false,
+  "reportUnknownParameterType": false,
+  "reportUnknownVariableType": false,
+  "reportUnnecessaryIsInstance": false,
+  "reportUnusedImport": false,
+  "pythonVersion": "3.13"
+}
