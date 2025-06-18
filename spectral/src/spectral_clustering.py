@@ -41,7 +41,11 @@ def spectral_clustering_k2(X, n_neighbors=5, use_normalized_laplacian=True):
         D_sqrt_inv = np.diag(degrees_sqrt_inv)
 
         # L_norm = D^(-1/2) * L * D^(-1/2) = I - D^(-1/2) * A * D^(-1/2)
-        L = np.eye(len(D)) - D_sqrt_inv @ A @ D_sqrt_inv
+        # Suppress the warning about invalid values in matrix multiplication
+        with np.errstate(invalid='ignore'):
+            L = np.eye(len(D)) - D_sqrt_inv @ A @ D_sqrt_inv
+        # Set any NaN values to 0 (these correspond to isolated nodes)
+        L = np.nan_to_num(L)
     else:
         # L = D - A
         L = D - A
