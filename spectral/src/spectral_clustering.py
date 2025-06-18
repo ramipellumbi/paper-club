@@ -1,6 +1,6 @@
 import numpy as np
 
-from .compute_adjacency_matrix import compute_adjacency_matrix
+from compute_adjacency_matrix import compute_adjacency_matrix
 
 
 def spectral_clustering_k2(X, n_neighbors=5, use_normalized_laplacian=True):
